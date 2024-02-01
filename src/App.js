@@ -108,14 +108,14 @@ const App = () => {
           <div>
             <h4>Nos grues premiers prix</h4>
             {lowPrices.map((grue) => (
-              <p key={grue.id}><div className='nomGrue'>{grue.nom} </div><i>Prix: {grue.prix} euros</i></p>
+              <p key={grue.id}><b><div className='nomGrue'>{grue.nom} </div></b><i>Prix: {grue.prix} euros</i></p>
             ))}
           </div>
 
           <div>
             <h4>Entre </h4>
             {mediumPrices.map((grue) => (
-              <p key={grue.id}><div className='nomGrue2'>{grue.nom} </div> <i>Prix: {grue.prix} euros</i></p>
+              <p key={grue.id}><b><div className='nomGrue2'>{grue.nom} </div></b> <i>Prix: {grue.prix} euros</i></p>
             ))}
           </div>
 
