@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "nom": "Grue Pro",
+      "prix": 50000,
+      "fabriquant": "ACME Cranes",
+      "couleur": "jaune"
+    },
+    {
+      "id": 2,
+      "nom": "Grue Prox Max",
+      "prix": 60000,
+      "fabriquant": "Heavy Lifters Inc.",
+      "couleur": "jaune"
+    },
+    {
+      "id": 3,
+      "nom": "Super Grue ",
+      "prix": 75000,
+      "fabriquant": "Sky High Industries",
+      "couleur": "Vert"
+    },
+    {
+      "id": 4,
+      "nom": "Grue ++",
+      "prix": 48000,
+      "fabriquant": "Crane Masters",
+      "couleur": "Jaune"
+    },
+    {
+      "id": 5,
+      "nom": "Super Grue Pro Max",
+      "prix": 55000,
+      "fabriquant": "Lift It Up Co.",
+      "couleur": "Orange"
+    },
+    {
+      "id": 6,
+      "nom": "Grue F",
+      "prix": 70000,
+      "fabriquant": "Top Cranes",
+      "couleur": "Violet"
+    },
+    {
+      "id": 7,
+      "nom": "Grue G",
+      "prix": 90000,
+      "fabriquant": "Elevate Solutions",
+      "couleur": "Gris"
+    },
+    {
+      "id": 8,
+      "nom": "Grue H",
+      "prix": 80000,
+      "fabriquant": "Crane Innovators",
+      "couleur": "Marron"
+    },
+    {
+      "id": 9,
+      "nom": "Grue I",
+      "prix": 65000,
+      "fabriquant": "Skyscraper Machines",
+      "couleur": "Noir"
+    },
+    {
+      "id": 10,
+      "nom": "Grue J",
+      "prix": 72000,
+      "fabriquant": "High Reach Systems",
+      "couleur": "Blanc"
+    },
+    {
+      "id": 11,
+      "nom": "Grue K",
+      "prix": 58000,
+      "fabriquant": "Tower Crane Solutions",
+      "couleur": "Rose"
+    },
+    {
+      "id": 12,
+      "nom": "Grue L",
+      "prix": 67000,
+      "fabriquant": "Lift & Carry",
+      "couleur": "Turquoise"
+    },
+    {
+      "id": 13,
+      "nom": "Grue M",
+      "prix": 82000,
+      "fabriquant": "Heavy Hoists Ltd.",
+      "couleur": "Argent"
+    },
+    {
+      "id": 14,
+      "nom": "Grue N",
+      "prix": 53000,
+      "fabriquant": "Crane Dynamics",
+      "couleur": "Doré"
+    },
+    {
+      "id": 15,
+      "nom": "Grue O",
+      "prix": 88000,
+      "fabriquant": "Aerial Lifters",
+      "couleur": "Bronze"
+    },
+    {
+      "id": 16,
+      "nom": "Grue P",
+      "prix": 63000,
+      "fabriquant": "Skyline Cranes",
+      "couleur": "Cuivre"
+    },
+    {
+      "id": 17,
+      "nom": "Grue Q",
+      "prix": 76000,
+      "fabriquant": "High Altitude Machines",
+      "couleur": "Indigo"
+    },
+    {
+      "id": 18,
+      "nom": "Grue R",
+      "prix": 58000,
+      "fabriquant": "Vertical Lift Co.",
+      "couleur": "Lime"
+    },
+    {
+      "id": 19,
+      "nom": "Grue S",
+      "prix": 92000,
+      "fabriquant": "Ultimate Hoisting",
+      "couleur": "Saphir"
+    },
+    {
+      "id": 20,
+      "nom": "Grue T",
+      "prix": 68000,
+      "fabriquant": "Crane Express",
+      "couleur": "Émeraude"
+    }
+  ]
+  
