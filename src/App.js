@@ -5,13 +5,29 @@ import image from './image.jpg';
 import image2 from './image2.png';
 import image3 from './image3.jpg';
 import image4 from './image4.jpg';
+import supergrue from './supergrue.jpg';
+import gruerose from './gruerose.png'
 import gruesData from './grues.json';
+import convert from './convert';
 
 
 const App = () => {
   const [lowPrices, setLowPrices] = useState([]);
   const [mediumPrices, setMediumPrices] = useState([]);
   const [highPrices, setHighPrices] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredGrues, setFilteredGrues] = useState([]);
+  const [convertedPrices, setConvertedPrices] = useState({
+    lowPrices: [],
+    mediumPrices: [],
+    highPrices: [],
+  });
+
+  mediumPrices.map((grue) => (
+    convert(grue.prix)
+  ))
+  
+
 
   useEffect(() => {
     const lowPriceGrues = [];
@@ -31,7 +47,14 @@ const App = () => {
     setLowPrices(lowPriceGrues);
     setMediumPrices(mediumPriceGrues);
     setHighPrices(highPriceGrues);
-  }, []);
+
+    const filtered = gruesData.filter((grue) =>
+      grue.nom.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredGrues(filtered);
+  }, [searchTerm]);
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -47,7 +70,25 @@ const App = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#prix">Nos prix</a>
+
               </li>
+              <li className="nav-item">
+                <form className="form-inline">
+                  <input
+                    className="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Rechercher par nom"
+                    aria-label="Rechercher"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+
+                </form>
+
+              </li>
+              <li><button className="btn btn-outline-light my-2 my-sm-0" type="submit">
+                Rechercher
+              </button></li>
             </ul>
           </div>
         </div>
@@ -77,6 +118,14 @@ const App = () => {
                   } else if (grue.id == 2) {
                     return (
                       <img className='fit-picture' src={image2} alt="Logo" />
+                    )
+                  } else if (grue.id == 19) {
+                    return (
+                      <img className='fit-picture' src={supergrue} alt="Logo" />
+                    )
+                  } else if (grue.id == 11) {
+                    return (
+                      <img className='fit-picture' src={gruerose} alt="Logo" />
                     )
                   } else {
                     return (
@@ -108,12 +157,12 @@ const App = () => {
           <div>
             <h4>Nos grues premiers prix</h4>
             {lowPrices.map((grue) => (
-              <p key={grue.id}><b><div className='nomGrue'>{grue.nom} </div></b><i>Prix: {grue.prix} euros</i></p>
+              <p key={grue.id}><b><div className='nomGrue'>{grue.nom} </div></b><i>Prix: { } {grue.prix} euros, </i></p>
             ))}
           </div>
 
           <div>
-            <h4>Entre </h4>
+            <h4>Les Grues classiques </h4>
             {mediumPrices.map((grue) => (
               <p key={grue.id}><b><div className='nomGrue2'>{grue.nom} </div></b> <i>Prix: {grue.prix} euros</i></p>
             ))}

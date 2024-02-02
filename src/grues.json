@@ -36,7 +36,7 @@
     },
     {
       "id": 6,
-      "nom": "Grue F",
+      "nom": "Grue 5 Pro",
       "prix": 70000,
       "fabriquant": "Top Cranes",
       "couleur": "Violet"
@@ -57,21 +57,21 @@
     },
     {
       "id": 9,
-      "nom": "Grue I",
+      "nom": "Grue 8",
       "prix": 65000,
       "fabriquant": "Skyscraper Machines",
       "couleur": "Noir"
     },
     {
       "id": 10,
-      "nom": "Grue J",
+      "nom": "Grue 8 Pro",
       "prix": 72000,
       "fabriquant": "High Reach Systems",
       "couleur": "Blanc"
     },
     {
       "id": 11,
-      "nom": "Grue K",
+      "nom": "Grue 4 Pro",
       "prix": 58000,
       "fabriquant": "Tower Crane Solutions",
       "couleur": "Rose"
@@ -127,7 +127,7 @@
     },
     {
       "id": 19,
-      "nom": "Grue S",
+      "nom": "Grue Premium ",
       "prix": 92000,
       "fabriquant": "Ultimate Hoisting",
       "couleur": "Saphir"
