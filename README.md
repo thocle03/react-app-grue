@@ -14,7 +14,6 @@ Bienvenue dans la boutique de grues, une application web construite avec React J
 ## Installation
 
 1. Clonez le dépôt :
-2. 
    git clone https://github.com/votre-utilisateur/vente-de-grues.git
    cd vente-de-grues
 3. Installez les dépendances :
@@ -43,3 +42,6 @@ Bootstrap
 
 ## Auteur
 Thomas Clerc B3 Hexagone
+
+## Licence
+Ce projet est dans le cadre d'un projet pour l'école Hexagone, il est libre de droit.
