@@ -30,13 +30,14 @@ const App = () => {
   mediumPrices.map((grue) => (
     convert(grue.prix)
   ))
-  
 
+  const [grues, setGrues] = useState([]);
 
   useEffect(() => {
     const lowPriceGrues = [];
     const mediumPriceGrues = [];
     const highPriceGrues = [];
+    getGrues();
 
     gruesData.forEach((grue) => {
       if (grue.prix < 60000) {
@@ -57,6 +58,10 @@ const App = () => {
     );
     setFilteredGrues(filtered);
   }, [searchTerm]);
+  async function getGrues() {
+    const { data } = await supabase.from("grues").select();
+    setGrues(data);
+  }
 
 
   return (
@@ -107,6 +112,37 @@ const App = () => {
         <div id="grus" className="container mt-4">
           <h2>Photos de Grues</h2>
           <ul>
+            {grues.map((gru) => (
+              <li key={gru.id}>
+                <br></br><strong>{gru.nom}</strong>- Prix: {gru.prix} - Fabriquant: {gru.fabriquant} - Couleur: {gru.couleur}
+                {(() => {
+                  if (gru.id == 1) {
+                    return (
+                      <img className='fit-picture' src={image} alt="Logo" />
+
+                    )
+                  } else if (gru.id == 2) {
+                    return (
+                      <img className='fit-picture' src={image2} alt="Logo" />
+                    )
+                  } else if (gru.id == 19) {
+                    return (
+                      <img className='fit-picture' src={supergrue} alt="Logo" />
+                    )
+                  } else if (gru.id == 11) {
+                    return (
+                      <img className='fit-picture' src={gruerose} alt="Logo" />
+                    )
+                  } else {
+                    return (
+                      <div> photo pas encore disponible</div>
+                    )
+                  }
+                })()}
+              </li>
+            ))}
+          </ul>
+          {/* <ul>
 
             {gruesData.map(grue => (
               <li key={grue.id}>
@@ -140,7 +176,7 @@ const App = () => {
               </li>
             ))}
 
-          </ul>
+          </ul> */}
           { }
           <br></br>
 
@@ -160,22 +196,22 @@ const App = () => {
           <h2>Nos prix</h2>
           <div>
             <h4>Nos grues premiers prix</h4>
-            {lowPrices.map((grue) => (
-              <p key={grue.id}><b><div className='nomGrue'>{grue.nom} </div></b><i>Prix: { } {grue.prix} euros, </i></p>
+            {lowPrices.map((gru) => (
+              <p key={gru.id}><b><div className='nomGrue'>{gru.nom} </div></b><i>Prix: { } {gru.prix} euros, </i></p>
             ))}
           </div>
 
           <div>
             <h4>Les Grues classiques </h4>
-            {mediumPrices.map((grue) => (
-              <p key={grue.id}><b><div className='nomGrue2'>{grue.nom} </div></b> <i>Prix: {grue.prix} euros</i></p>
+            {mediumPrices.map((gru) => (
+              <p key={gru.id}><b><div className='nomGrue2'>{gru.nom} </div></b> <i>Prix: {gru.prix} euros</i></p>
             ))}
           </div>
 
           <div>
             <h4>Les grues Premium</h4>
-            {highPrices.map((grue) => (
-              <p key={grue.id}><b><div className='nomGrue3'>{grue.nom} </div></b> <i>Prix: {grue.prix} euros</i></p>
+            {highPrices.map((gru) => (
+              <p key={gru.id}><b><div className='nomGrue3'>{gru.nom} </div></b> <i>Prix: {gru.prix} euros</i></p>
             ))}
           </div>
         </div>
@@ -186,9 +222,13 @@ const App = () => {
       <br></br>
       <br></br>
       <footer>
-        <span>tclerc (C) All rights Reserved</span>
+        <span>tclerc All rights Reserved</span>
       </footer>
+
+
     </div>
+
+
 
   );
 };
