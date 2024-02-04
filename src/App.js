@@ -9,7 +9,11 @@ import supergrue from './supergrue.jpg';
 import gruerose from './gruerose.png'
 import gruesData from './grues.json';
 import convert from './convert';
+import { createClient } from '@supabase/supabase-js'
 
+const supabaseUrl = 'https://zfoxpvufbkikcipthsup.supabase.co'
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpmb3hwdnVmYmtpa2NpcHRoc3VwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY4ODYxNDgsImV4cCI6MjAyMjQ2MjE0OH0.3-wtnTfPxRlf86E9hP86U2wymr4gHLtpxEsTgo1q18k "
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 const App = () => {
   const [lowPrices, setLowPrices] = useState([]);
